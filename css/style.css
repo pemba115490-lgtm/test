@@ -1,0 +1,59 @@
+body {
+    background-color: blanchedalmond;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgb(249, 204, 23);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(236, 122, 152);
+}
+
+h1,
+h2 {
+    color: rgb(255, 0, 64);
+    width: fit-content;
+}
+
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.about-container,
+.project-container,
+.skills-container,
+.contact-container,
+.education-container {
+
+    background-color: rgb(241, 116, 127);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px black;
+}
+
+.about-container {
+    display: flex;
+}
