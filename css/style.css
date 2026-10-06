@@ -1,18 +1,24 @@
 body {
-    background-color: blanchedalmond;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(135deg, rgb(88, 169, 125), rgb(114, 176, 102));
+    color: aliceblue;
+    font-family: 'Segoe UI', Times New Roman, sans-serif;
     line-height: 1.6;
+    margin: 0;
 }
 
+
+/* Header */
+
 header {
-    background-color: rgb(249, 204, 23);
+    background-color: rgb(236, 240, 211);
+    color: rgb(215, 220, 167);
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 nav ul {
@@ -22,38 +28,280 @@ nav ul {
 }
 
 nav a {
+    color: rgb(159, 216, 126);
     text-decoration: none;
 }
 
 nav a:hover {
-    color: rgb(236, 122, 152);
+    color: rgb(162, 202, 140);
 }
 
-h1,
-h2 {
-    color: rgb(255, 0, 64);
-    width: fit-content;
+
+/* Search Bar */
+
+.search-bar {
+    display: flex;
+    align-items: center;
 }
 
-main {
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 2rem;
+.search-bar input {
+    padding: 8px;
+    border: 1px solid rgb(155, 211, 206);
+    border-radius: 5px;
 }
 
-.about-container,
-.project-container,
-.skills-container,
-.contact-container,
-.education-container {
+.search-bar button {
+    padding: 8px 12px;
+    margin-left: 5px;
+}
 
-    background-color: rgb(241, 116, 127);
+
+/* About Section */
+
+#about {
+    background-color: white;
+    color: black;
+    margin: 30px;
     border-radius: 10px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 12px black;
+    box-shadow: 6px 6px 12px black;
 }
 
 .about-container {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    padding: 40px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 5px solid rgb(135, 180, 122);
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-container img:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Skills Section */
+
+#skills {
+    background-color: white;
+    color: black;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 12px black;
+}
+
+.skill-section {
+    background-color: rgb(190, 215, 180);
+    color: rgb(1, 6, 10);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 12px black;
+}
+
+.skill-section dl {
+    margin: 0;
+}
+
+.skill-section dt {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.skill-section dd {
+    margin-left: 0;
+}
+
+.skills-container .skill-item {
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.skills-container .skill-item:hover {
+    transform: scale(1.03);
+}
+
+
+/* Projects Section */
+
+#Projects {
+    background-color: white;
+    color: black;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 12px black;
+}
+
+article {
+    padding: 10px;
+}
+
+.projects-container article {
+    transition: transform 0.3s ease;
+}
+
+.projects-container article:hover {
+    transform: translateY(-5px);
+}
+
+.project-section {
+    background-color: rgb(194, 215, 180);
+    color: rgb(1, 6, 8);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 12px black;
+}
+
+
+/* Education Section */
+
+#Education {
+    background-color: rgb(223, 235, 215);
+    color: black;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 12px black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Contact Section */
+
+#contact {
+    background-color: white;
+    color: black;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 12px black;
+}
+
+input {
+    padding: 8px;
+}
+
+textarea {
+    padding: 8px;
+    width: 300px;
+    height: 120px;
+    resize: none;
+}
+
+button {
+    padding: 8px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: rgb(247, 232, 247);
+    color: black;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+/* New CSS Feature 1: Image opacity effect */
+
+.profile-pic {
+    opacity: 0.95;
+}
+
+
+/* New CSS Feature 2: Heading styling */
+
+h1,
+h2,
+h3 {
+    letter-spacing: 1px;
+}
+
+
+/* New CSS Feature 3: Better form layout */
+
+form input,
+form textarea {
+    border: 1px solid rgb(126, 164, 117);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+/* Mobile Responsive Design */
+
+@media (max-width: 758px) {
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+}
+
+
+/* Tablet Responsive Design */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
 }

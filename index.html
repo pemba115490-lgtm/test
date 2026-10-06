@@ -1,114 +1,284 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>My Portfolio</title>
+
 </head>
 
 <body>
+
     <header>
+
         <div class="header-container">
+
             <div class="logo">
                 <img src="images/Pembalogo.png" alt="logo" width="100" height="100">
             </div>
+
             <div class="nav-bar">
+
                 <nav>
+
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#Projects">Projects</a></li>
                         <li><a href="#Education">Education</a></li>
                         <li><a href="#contact">Contact</a></li>
-
                     </ul>
-                </nav>
-            </div>
-            <div class="search-bar">
-                <form>
 
-                    <label>Search</label>
-                    <input type="text" placeholder="Search here">
-                    <button type="submit">Submit</button>
-                </form>
+                </nav>
+
             </div>
+
+            <div class="search-bar">
+
+                <form>
+                    <input type="text" placeholder="Search here">
+                    <button type="submit">Search</button>
+                </form>
+
+            </div>
+
         </div>
+
     </header>
 
-    <Main>
+
+    <main>
+
+        <!-- About Section -->
+
         <section id="about">
-            <img src="images/PembaSherpa.png" alt="profile" width="150" height="150">
-            <h1>About me</h1>
 
-            <p>I am Pemba Sherpa, a BIT student at Model Institute of Technology (MIT) with an interest in technology,
-                web development, and creative digital projects. I enjoy learning new skills, exploring technology, and
-                working on projects that help me improve my practical knowledge. I am a hardworking, punctual, and
-                self-motivated person who likes taking on new challenges and learning from experience. Outside of
-                academics, I enjoy content making, painting, and swimming. I am always interested in exploring new
-                ideas, developing my skills, and growing both personally and professionally.
+            <div class="about-container">
 
-            </p>
+                <img src="images/PembaSherpa.png"
+                     alt="My Profile"
+                     class="profile-pic">
 
-            <h2>My Skills</h2>
-            <dl>
-                <dt>programming Language </dt>
-                <dd>C, C++</dd>
+                <div class="about-text">
 
-                <dt>UI/UX Design</dt>
-                <dd>Figma</dd>
+                    <h1>About Me</h1>
 
-                <dt>Database</dt>
-                <dd>MySQL, Oracle, MongoDB</dd>
+                    <p>
+                        I am Pemba Sherpa, a BIT student at Model Institute of Technology
+                        (MIT) with an interest in technology, web development, and creative
+                        digital projects. I enjoy learning new skills, exploring technology,
+                        and working on projects that help me improve my practical knowledge.
+                        I am a hardworking, punctual, and self-motivated person who likes
+                        taking on new challenges and learning from experience. Outside of
+                        academics, I enjoy content making, painting, and swimming. I am always
+                        interested in exploring new ideas, developing my skills, and growing
+                        both personally and professionally.
+                    </p>
 
-                <dt>Networking</dt>
-                <dd>TCP/IP, DNS, DHCP</dd>
+                </div>
 
-                <dt>Tools</dt>
-                <dd>Powerpoint, Excel, VS Code, Word</dd>
+            </div>
 
-                <dt>Framework</dt>
-                <dd>dot net, Springboot, React</dd>
-
-            </dl>
         </section>
+
+
+        <!-- Skills Section -->
+
+        <section id="skills">
+
+            <div class="skills-container">
+
+                <div class="skill-section">
+                    <h2>My Skills</h2>
+                </div>
+
+
+                <div class="skill-item">
+
+                    <div class="skill-section">
+
+                        <dl>
+                            <dt>Programming Language</dt>
+                            <dd>C, C++</dd>
+                        </dl>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-item">
+
+                    <div class="skill-section">
+
+                        <dl>
+                            <dt>UI/UX Design</dt>
+                            <dd>Figma</dd>
+                        </dl>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-item">
+
+                    <div class="skill-section">
+
+                        <dl>
+                            <dt>Database</dt>
+                            <dd>MySQL, Oracle, MongoDB</dd>
+                        </dl>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-item">
+
+                    <div class="skill-section">
+
+                        <dl>
+                            <dt>Networking</dt>
+                            <dd>TCP/IP, DNS, DHCP</dd>
+                        </dl>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-item">
+
+                    <div class="skill-section">
+
+                        <dl>
+                            <dt>Tools</dt>
+                            <dd>PowerPoint, Excel, VS Code, Word</dd>
+                        </dl>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-item">
+
+                    <div class="skill-section">
+
+                        <dl>
+                            <dt>Framework</dt>
+                            <dd>Dot Net, Springboot, React</dd>
+                        </dl>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Projects Section -->
 
         <section id="Projects">
-            <h1>My Projects</h1>
-            <article>
-                <h2>Online Food Ordering System</h2>
-                <p>A web-based project designed to allow users to browse food items, view menus, place orders, and
-                    manage their food delivery details.</p>
-            </article>
 
-            <article>
-                <h2>Library Management System</h2>
-                <p>A Java-based project that helps manage books, student records, borrowing details, and book returns
-                    using basic programming and database concepts.</p>
-            </article>
+            <div class="projects-container">
 
-            <article>
-                <h2>Event Booking System</h2>
-                <p>A database-driven project developed to manage events, venues, customer registrations, and bookings
-                    using MySQL and relational database concepts.</p>
-            </article>
+                <div class="project-section">
+
+                    <h2>My Projects</h2>
+
+                </div>
+
+
+                <article>
+
+                    <div class="project-section">
+
+                        <h3>Online Food Ordering System</h3>
+
+                        <p>
+                            A web-based project designed to allow users to browse food items,
+                            view menus, place orders, and manage their food delivery details.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="project-section">
+
+                        <h3>Library Management System</h3>
+
+                        <p>
+                            A Java-based project that helps manage books, student records,
+                            borrowing details, and book returns using basic programming and
+                            database concepts.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="project-section">
+
+                        <h3>Event Booking System</h3>
+
+                        <p>
+                            A database-driven project developed to manage events, venues,
+                            customer registrations, and bookings using MySQL and relational
+                            database concepts.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
         </section>
 
+
+        <!-- Education Section -->
+
         <section id="Education">
-            <h1>Education</h1>
-            <table border="1">
+
+            <h2>Education</h2>
+
+            <table>
+
                 <thead>
 
                     <tr>
                         <th>S.N</th>
                         <th>Level</th>
                         <th>Institution</th>
-                        <th>Completion year</th>
+                        <th>Completion Year</th>
                         <th>Grade</th>
                         <th>GPA</th>
                     </tr>
+
                 </thead>
+
+
                 <tbody>
+
                     <tr>
                         <td>1</td>
                         <td>SLC</td>
@@ -118,6 +288,7 @@
                         <td>3.45</td>
                     </tr>
 
+
                     <tr>
                         <td>2</td>
                         <td>+2</td>
@@ -125,60 +296,120 @@
                         <td>2023</td>
                         <td>B+</td>
                         <td>2.87</td>
-
                     </tr>
+
 
                     <tr>
                         <td>3</td>
                         <td>Bachelors</td>
-                        <td>Model Institue of Technology </td>
-                        <td>2024- Ongoing</td>
+                        <td>Model Institute of Technology</td>
+                        <td>2024 - Ongoing</td>
                         <td>Ongoing</td>
                         <td>Ongoing</td>
-
                     </tr>
 
                 </tbody>
 
             </table>
+
         </section>
+
+
+        <!-- Contact Section -->
 
         <section id="contact">
-            <h4>Contact me</h4>
-            <p4>
-                <form>
-                    <br><label>Name</label>
-                    <input type="text" placeholder="Type your name here"></br>
-                    <br><label>Email</label>
-                    <input type="email" placeholder="Type your email here"></br>
 
-                    <br><label>Message</label>
-                    <input type="message" placeholder="Type your message here"></br>
-                    <br><button type="submit">Submit</button></br>
+            <h2>Contact Me</h2>
 
-                </form>
-            </p4>
+            <form>
+
+                <br>
+
+                <label>Name</label><br>
+
+                <input type="text"
+                       placeholder="Type your name here">
+
+                <br>
+                <br>
+
+
+                <label>Email</label><br>
+
+                <input type="email"
+                       placeholder="Type your email here">
+
+                <br>
+                <br>
+
+
+                <label>Message</label><br>
+
+                <textarea id="message"
+                          name="message"
+                          rows="5"
+                          cols="40"
+                          placeholder="Type your message here"></textarea>
+
+                <br>
+                <br>
+
+
+                <button type="submit">Submit</button>
+
+            </form>
+
         </section>
-    </Main>
 
-    <Footer>
+    </main>
 
 
-        <h5>Follow me on</h5>
-        <p5>
-            <a href="https://www.instagram.com/?hl=en"> <img src="images/instagram.jpg" alt="instagram" width="150"
-                    height="80"></a>
+    <!-- Footer -->
 
-            <a href="https://www.facebook.com/"><img src="images/facebook.jpg" alt="facebook" width="80"
-                    height="80"></a>
+    <footer>
 
-            <a href="https://web.whatsapp.com/"><img src="images/whatsapp.webp" alt="whatsapp" width="80"
-                    height="80"></a>
+        <h2>Follow Me On</h2>
 
-        </p5>
-        <p>&copy; 2024 Pemba Dolma Lama Sherpa. All rights reserved.</p>
+        <p>
+
+            <a href="https://www.instagram.com/?hl=en">
+
+                <img src="images/instagram.jpg"
+                     alt="Instagram"
+                     width="150"
+                     height="80">
+
+            </a>
+
+
+            <a href="https://www.facebook.com/">
+
+                <img src="images/facebook.jpg"
+                     alt="Facebook"
+                     width="80"
+                     height="80">
+
+            </a>
+
+
+            <a href="https://web.whatsapp.com/">
+
+                <img src="images/whatsapp.webp"
+                     alt="WhatsApp"
+                     width="80"
+                     height="80">
+
+            </a>
+
         </p>
+
+
+        <p>
+            &copy; 2024 Pemba Sherpa. All rights reserved.
+        </p>
+
+    </footer>
+
 </body>
-</footer>
 
 </html>
