@@ -6,6 +6,11 @@ body {
     margin: 0;
 }
 
+/* Smooth scrolling between sections */
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* Header */
 
@@ -199,6 +204,11 @@ td {
     text-align: center;
 }
 
+/* Highlight table rows when hovering */
+tbody tr:hover {
+    background-color: rgb(194, 215, 180);
+}
+
 
 /* Contact Section */
 
@@ -224,6 +234,109 @@ textarea {
 
 button {
     padding: 8px;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: rgb(88, 169, 125);
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Gallery Section (image slider) */
+
+#gallery {
+    background-color: white;
+    color: black;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 12px black;
+}
+
+.slider {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.slider-viewport {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+}
+
+.slider-track {
+    display: flex;                 /* slides sit side by side */
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+    will-change: transform;
+}
+
+.slider-track.no-transition {
+    transition: none;
+}
+
+.slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: rgb(236, 240, 211);
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(88, 169, 125, 0.75);
+    color: rgb(2, 2, 2);
+    font-size: 20px;
+    z-index: 2;
+}
+
+.slider-btn.prev {
+    left: 12px;
+}
+
+.slider-btn.next {
+    right: 12px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(190, 215, 180);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dot.active {
+    background-color: rgb(88, 169, 125);
+    transform: scale(1.4);
 }
 
 
@@ -287,6 +400,16 @@ form textarea {
 
     textarea {
         width: 100%;
+    }
+
+    #gallery {
+        padding: 15px;
+    }
+
+    .slider-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
     }
 
 }

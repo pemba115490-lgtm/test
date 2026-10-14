@@ -32,6 +32,7 @@
                         <li><a href="#">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#Projects">Projects</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#Education">Education</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -62,7 +63,7 @@
 
             <div class="about-container">
 
-                <img src="images/PembaSherpa.png"
+                <img src="images/ss5.png"
                      alt="My Profile"
                      class="profile-pic">
 
@@ -255,6 +256,37 @@
         </section>
 
 
+        <!-- Gallery Section (profile photo slider) -->
+
+        <section id="gallery">
+
+            <h2>Profile Gallery</h2>
+
+            <div class="slider" id="profile-slider">
+
+                <div class="slider-viewport">
+
+                    <div class="slider-track">
+
+                        <div class="slide"><img src="images/ss1.jpeg" alt="Pemba Sherpa - photo 1"></div>
+                        <div class="slide"><img src="images/ss2.png" alt="Pemba Sherpa - photo 2"></div>
+                        <div class="slide"><img src="images/ss3.png" alt="Pemba Sherpa - photo 3"></div>
+                        <div class="slide"><img src="images/ss4.png" alt="Pemba Sherpa - photo 4"></div>
+  
+                    </div>
+
+                    <button class="slider-btn prev" type="button" aria-label="Previous photo">&#10094;</button>
+                    <button class="slider-btn next" type="button" aria-label="Next photo">&#10095;</button>
+
+                </div>
+
+                <div class="slider-dots"></div>
+
+            </div>
+
+        </section>
+
+
         <!-- Education Section -->
 
         <section id="Education">
@@ -409,6 +441,64 @@
         </p>
 
     </footer>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    var slider = document.querySelector('#gallery .slider');
+    if (!slider) { console.error('No .slider found inside #gallery'); return; }
+
+    var track   = slider.querySelector('.slider-track');
+    var slides  = track.querySelectorAll('.slide');
+    var prevBtn = slider.querySelector('.slider-btn.prev');
+    var nextBtn = slider.querySelector('.slider-btn.next');
+    var dotsBox = slider.querySelector('.slider-dots');
+
+    var total = slides.length;
+    var index = 0;
+    var timer = null;
+    var dots  = [];
+
+    // Create one dot per photo
+    for (var i = 0; i < total; i++) {
+        (function (n) {
+            var dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'dot';
+            dot.setAttribute('aria-label', 'Go to photo ' + (n + 1));
+            dot.addEventListener('click', function () {
+                showSlide(n);
+                restartAutoPlay();
+            });
+            dotsBox.appendChild(dot);
+            dots.push(dot);
+        })(i);
+    }
+
+    // Slide to photo number i
+    function showSlide(i) {
+        index = (i + total) % total;
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+        for (var d = 0; d < dots.length; d++) {
+            dots[d].classList.toggle('active', d === index);
+        }
+    }
+
+    function startAutoPlay() {
+        clearInterval(timer);
+        timer = setInterval(function () { showSlide(index + 1); }, 4000);
+    }
+    function stopAutoPlay() { clearInterval(timer); }
+    function restartAutoPlay() { stopAutoPlay(); startAutoPlay(); }
+
+    prevBtn.addEventListener('click', function () { showSlide(index - 1); restartAutoPlay(); });
+    nextBtn.addEventListener('click', function () { showSlide(index + 1); restartAutoPlay(); });
+
+    slider.addEventListener('mouseenter', stopAutoPlay);
+    slider.addEventListener('mouseleave', startAutoPlay);
+
+    showSlide(0);
+    startAutoPlay();
+});
+</script>
 
 </body>
 
